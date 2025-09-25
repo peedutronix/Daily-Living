@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Living Tutor | Mindfulness for Everyday Life</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('http://static.photos/nature/1200x630/42');
+            background-size: cover;
+            background-position: center;
+        }
+        .playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .btn-primary {
+            background-color: #5a8f7b;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #3a6b5a;
+            transform: translateY(-2px);
+        }
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        .testimonial-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .program-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9779849489310" class="whatsapp-btn">
+        <i data-feather="message-circle"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold playfair text-gray-800">Daily Living</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-green-600 text-sm font-medium">Home</a>
+                    <a href="#about" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">About</a>
+                    <a href="#programs" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Programs</a>
+                    <a href="#community" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Community</a>
+                    <a href="#contact" class="text-gray-500 hover:text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Contact</a>
+                    <a href="#book" class="ml-8 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white btn-primary">Book a Session</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-bg min-h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl mx-auto" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 playfair">Mindfulness for Everyday Life</h1>
+            <p class="text-xl md:text-2xl mb-8">Guiding you to enjoy solitude, social gatherings, and mindful living through meditation, yoga, and wisdom practices.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#book" class="px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white btn-primary md:py-4 md:text-lg md:px-10">Book a Session</a>
+                <a href="#retreats" class="px-8 py-3 border border-white text-base font-medium rounded-md shadow-sm text-white bg-transparent hover:bg-white hover:bg-opacity-10 md:py-4 md:text-lg md:px-10">Join Our Retreat</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-12 lg:mb-0" data-aos="fade-right">
+                    <img src="http://static.photos/people/640x360/10" alt="Sudeep Regmi" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-bold mb-6 playfair">About Sudeep Regmi</h2>
+                    <p class="text-gray-600 mb-6">With over a decade of experience in mindfulness practices, Sudeep Regmi is dedicated to helping individuals find peace and balance in their daily lives through meditation, yoga, and philosophical discussions.</p>
+                    <p class="text-gray-600 mb-6">His approach combines traditional wisdom with modern techniques, making mindfulness accessible to everyone regardless of their background or experience level.</p>
+                    <div class="flex space-x-4">
+                        <a href="#programs" class="px-6 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white btn-primary">Our Programs</a>
+                        <a href="#contact" class="px-6 py-2 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 playfair">Our Programs & Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore our offerings designed to bring mindfulness into every aspect of your life.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <div class="program-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/yoga/640x360/1" alt="Meditation" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="flex-shrink-0 bg-green-100 p-2 rounded-full">
+                                <i data-feather="activity" class="text-green-600"></i>
+                            </div>
+                            <h3 class="ml-3 text-lg font-medium">Meditation Practices</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Learn various meditation techniques including choiceless awareness and transcendental meditation to cultivate inner peace.</p>
+                        <a href="#" class="text-green-600 font-medium inline-flex items-center">Learn more <i data-feather="arrow-right" class="ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Program 2 -->
+                <div class="program-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/yoga/640x360/2" alt="Yoga" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="flex-shrink-0 bg-green-100 p-2 rounded-full">
+                                <i data-feather="wind" class="text-green-600"></i>
+                            </div>
+                            <h3 class="ml-3 text-lg font-medium">Yoga Sessions</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Harmonize body and mind through our yoga sessions tailored for all levels, from beginners to advanced practitioners.</p>
+                        <a href="#" class="text-green-600 font-medium inline-flex items-center">Learn more <i data-feather="arrow-right" class="ml-1"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Program 3 -->
+                <div class="program-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="http://static.photos/nature/640x360/3" alt="Retreats" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <div class="flex-shrink-0 bg-green-100 p-2 rounded-full">
+                                <i data-feather="map" class="text-green-600"></i>
+                            </div>
+                            <h3 class="ml-3 text-lg font-medium">Retreats & Treks</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Immerse yourself in nature with our guided treks and retreats that combine mindfulness with outdoor adventure.</p>
+                        <a href="#" class="text-green-600 font-medium inline-flex items-center">Learn more <i data-feather="arrow-right" class="ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 playfair">What People Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Hear from those who have experienced our mindfulness programs.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="http://static.photos/people/200x200/1" alt="Testimonial">
+                        <div>
+                            <h4 class="font-medium">Anita Sharma</h4>
+                            <p class="text-gray-500 text-sm">Yoga Practitioner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Sudeep's meditation guidance has transformed my daily routine. I now approach each day with clarity and calmness I never thought possible."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="http://static.photos/people/200x200/2" alt="Testimonial">
+                        <div>
+                            <h4 class="font-medium">Rajiv Patel</h4>
+                            <p class="text-gray-500 text-sm">Business Owner</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The philosophy discussions have given me new perspectives on life and business. It's more than just meditation—it's a way of living."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <img class="w-12 h-12 rounded-full mr-4" src="http://static.photos/people/200x200/3" alt="Testimonial">
+                        <div>
+                            <h4 class="font-medium">Priya Adhikari</h4>
+                            <p class="text-gray-500 text-sm">Retreat Participant</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The mountain retreat was life-changing. The combination of meditation, yoga, and nature was exactly what I needed to reset my mind and body."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                        <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 playfair">Join Our Community</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Connect with like-minded individuals through our events and workshops.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-right">
+                    <img src="http://static.photos/workshop/640x360/1" alt="Workshop" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Monthly Mindfulness Workshop</h3>
+                        <p class="text-gray-600 mb-4">Join us every first Saturday of the month for a deep dive into mindfulness practices and group meditation.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i data-feather="calendar" class="w-4 h-4 mr-1 inline"></i> Next: June 3, 2023</span>
+                            <a href="#" class="text-green-600 font-medium inline-flex items-center">Register <i data-feather="arrow-right" class="ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-left">
+                    <img src="http://static.photos/nature/640x360/4" alt="Hike" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Mindful Nature Hike</h3>
+                        <p class="text-gray-600 mb-4">Experience the healing power of nature combined with mindfulness practices on our guided hikes.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i data-feather="calendar" class="w-4 h-4 mr-1 inline"></i> Next: June 10, 2023</span>
+                            <a href="#" class="text-green-600 font-medium inline-flex items-center">Register <i data-feather="arrow-right" class="ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+                <div class="mb-12 lg:mb-0" data-aos="fade-right">
+                    <h2 class="text-3xl font-bold mb-6 playfair">Get In Touch</h2>
+                    <p class="text-gray-600 mb-6">Have questions about our programs or want to schedule a session? Reach out to us—we'd love to hear from you.</p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-lg font-medium mb-3">Contact Information</h3>
+                        <div class="flex items-start mb-3">
+                            <i data-feather="mail" class="w-5 h-5 text-green-600 mr-3 mt-1"></i>
+                            <span>mail@sudeepregmi.com.np</span>
+                        </div>
+                        <div class="flex items-start mb-3">
+                            <i data-feather="phone" class="w-5 h-5 text-green-600 mr-3 mt-1"></i>
+                            <span>+977 9849489310</span>
+                        </div>
+                        <div class="flex items-start mb-3">
+                            <i data-feather="map-pin" class="w-5 h-5 text-green-600 mr-3 mt-1"></i>
+                            <span>27.677646, 85.338121</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-medium mb-3">Newsletter</h3>
+                        <p class="text-gray-600 mb-4">Subscribe to receive mindfulness tips and updates on our programs.</p>
+                        <form class="flex">
+                            <input type="email" placeholder="Your email" class="flex-grow px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            <button type="submit" class="px-4 py-2 border border-transparent text-sm font-medium rounded-r-md shadow-sm text-white btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                            <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                            <select id="subject" name="subject" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500">
+                                <option>General Inquiry</option>
+                                <option>Private Session</option>
+                                <option>Group Workshop</option>
+                                <option>Retreat Information</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4 playfair">Find Us</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Visit our meditation center or join us at one of our retreat locations.</p>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md" data-aos="zoom-in">
+                <div class="aspect-w-16 aspect-h-9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.456808394462!2d85.338121!3d27.677646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199f75f08da5%3A0x641a4463533be28c!2sKathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2sus!4v1623941234567!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg"></iframe>
+                </div>
+                <div class="mt-4 text-center">
+                    <a href="https://www.google.com/maps/search/?api=1&query=27.677646,85.338121" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white btn-primary">
+                        <i data-feather="map" class="w-4 h-4 mr-2"></i> Open in Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-medium mb-4 playfair">Daily Living</h3>
+                    <p class="text-gray-400">Mindfulness for Everyday Life</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#programs" class="text-gray-400 hover:text-white">Programs</a></li>
+                        <li><a href="#community" class="text-gray-400 hover:text-white">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Programs</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Meditation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Yoga</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Retreats</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Philosophy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-medium mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i data-feather="twitter"></i></a>
+                        <a href="https://wa.me/9779849489310" class="text-gray-400 hover:text-white"><i data-feather="message-circle"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+                <p>&copy; 2023 Daily Living Tutor. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
